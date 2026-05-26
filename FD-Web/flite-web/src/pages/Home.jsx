@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import FliteLogo from '../assets/Flite-Logo-SVG.svg';
 
 export default function Home({ onGetStarted }) {
     const [openFaq, setOpenFaq] = useState(null);
@@ -61,7 +62,11 @@ export default function Home({ onGetStarted }) {
             {/* --- HEADER / NAV --- */}
             <header className="flex justify-between items-center px-6 py-5 md:px-16 bg-[#FBF9F6] border-b border-[#EAE6DF]/60">
                 <div className="flex items-center">
-                    <span className="tracking-widest font-black text-sm">FLITE</span>
+                    <img
+                        src={FliteLogo}
+                        alt="Flite logo"
+                        className="w-16 h-8 mr-3"
+                    />
                 </div>
                 <nav className="flex space-x-10 text-xs tracking-widest text-gray-700 font-bold">
                     <a href="#about" className="hover:text-black transition-colors">About</a>
@@ -80,11 +85,11 @@ export default function Home({ onGetStarted }) {
                 <section className="relative text-center max-w-3xl mx-auto flex flex-col items-center mb-28 pt-8">
                     {/* Premium Ambient Telemetry Grid Underlay */}
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10 overflow-visible">
-                        <svg 
-                            width="640" 
-                            height="640" 
-                            viewBox="0 0 640 640" 
-                            fill="none" 
+                        <svg
+                            width="640"
+                            height="640"
+                            viewBox="0 0 640 640"
+                            fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-[320px] h-[320px] md:w-[640px] md:h-[640px] opacity-[0.03] text-[#111111] animate-[spin_180s_linear_infinite] select-none"
                         >
@@ -93,11 +98,11 @@ export default function Home({ onGetStarted }) {
                             <circle cx="320" cy="320" r="200" stroke="currentColor" strokeWidth="1" />
                             <circle cx="320" cy="320" r="100" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
                             <circle cx="320" cy="320" r="40" stroke="currentColor" strokeWidth="1" />
-                            
+
                             {/* Crosshairs */}
                             <line x1="320" y1="0" x2="320" y2="640" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" />
                             <line x1="0" y1="320" x2="640" y2="320" stroke="currentColor" strokeWidth="1" strokeDasharray="2 2" />
-                            
+
                             {/* Technical Grid Marks */}
                             <line x1="120" y1="315" x2="120" y2="325" stroke="currentColor" strokeWidth="1.5" />
                             <line x1="520" y1="315" x2="520" y2="325" stroke="currentColor" strokeWidth="1.5" />
@@ -127,7 +132,7 @@ export default function Home({ onGetStarted }) {
 
                     {/* Action Hub */}
                     <div className="mt-10 flex justify-center space-x-4 font-mono font-bold">
-                        <button 
+                        <button
                             onClick={onGetStarted}
                             className="bg-[#111111] hover:bg-black text-white text-sm tracking-wider px-8 py-4 transition-all"
                         >
@@ -270,11 +275,11 @@ export default function Home({ onGetStarted }) {
                 <section id="faq" className="max-w-4xl mx-auto text-left">
                     <span className="text-xs text-[#FF6B00] font-black tracking-[0.3em] block text-center mb-4">Common inquiries</span>
                     <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center text-[#111111] mb-12">Frequently Asked Questions</h2>
-                    
+
                     <div className="border-t border-[#EAE6DF]">
                         {faqs.map((faq, i) => (
                             <div key={i} className="border-b border-[#EAE6DF]">
-                                <button 
+                                <button
                                     onClick={() => toggleFaq(i)}
                                     className="w-full py-6 flex justify-between items-center text-left font-mono font-bold text-sm md:text-base tracking-wide hover:text-[#FF6B00] transition-colors"
                                 >
@@ -283,9 +288,8 @@ export default function Home({ onGetStarted }) {
                                         {openFaq === i ? '[-]' : '[+]'}
                                     </span>
                                 </button>
-                                <div className={`overflow-hidden transition-all duration-300 ${
-                                    openFaq === i ? 'max-h-40 pb-6' : 'max-h-0'
-                                }`}>
+                                <div className={`overflow-hidden transition-all duration-300 ${openFaq === i ? 'max-h-40 pb-6' : 'max-h-0'
+                                    }`}>
                                     <p className="text-sm md:text-base text-gray-600 font-sans leading-relaxed">
                                         {faq.answer}
                                     </p>
@@ -300,7 +304,7 @@ export default function Home({ onGetStarted }) {
             {/* --- FOOTER --- */}
             <footer className="border-t border-zinc-800 bg-[#111111] px-8 py-16 md:px-20 text-white">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10 md:gap-4">
-                    
+
                     {/* Dev Studio / Brand Info */}
                     <div className="flex flex-col space-y-4">
                         <div className="flex items-center space-x-2">

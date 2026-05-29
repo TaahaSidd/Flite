@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Home from "./pages/Home";
-import FlightTicker from "./components/FlightTicker";
+import FlightTicker from "./components/ticker/FlightTicker";
 
 export default function App() {
   const [view, setView] = useState('home');

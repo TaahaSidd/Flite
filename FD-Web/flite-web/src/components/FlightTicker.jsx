@@ -14,7 +14,6 @@ const flights = [
 export default function FlightTicker({ onBack }) {
     return (
         <div className="w-screen min-h-screen bg-[#0C0C0C] flex flex-col justify-center items-center overflow-hidden relative font-mono selection:bg-[#FF6B00] selection:text-white">
-            {/* Minimalist Back Navigation Button */}
             {/* Top Status Bar */}
             <div className="absolute top-8 left-8 right-8 flex items-center justify-between">
 

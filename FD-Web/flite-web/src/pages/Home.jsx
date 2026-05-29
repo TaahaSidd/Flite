@@ -59,7 +59,7 @@ export default function Home({ onGetStarted }) {
                 }
             `}</style>
 
-            {/* --- HEADER / NAV --- */}
+            {/* HEADER */}
             <header className="flex justify-between items-center px-6 py-5 md:px-16 bg-[#FBF9F6] border-b border-[#EAE6DF]/60">
                 <div className="flex items-center">
                     <img
